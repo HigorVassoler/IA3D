@@ -5,30 +5,29 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [
     {
-        enunciado: "Você sabe como as IA's são feitas?",
-        alternativas: ["Sim", "Não"]
+        enunciado: "Você gosta da ideia de Inteligência Artificial?",
+        alternativas:["Sim","Não"]
     },
     {
-        enunciado: "Você acha que as IA's estão deixando as pessoas burras?",
-        alternativas: ["Sim", "Não"]
+        enunciado: "Pergunta 2",
+        alternativas:["Alternativa 1","Alternativa 2"]
     },
     {
-        enunciado: "Você acha que as IA's estão atrapalhando mais do que deveriam ajudar?",
-        alternativas: ["Sim", "Não"]
+        enunciado: "Pergunta 3",
+        alternativas:["Alternativa 1","Alternativa 2"]
     }
 ]
 
-let atual = 0;
+let posicao = 0;
 let perguntaAtual;
 
-function mostraPergunta() {
-    perguntaAtual = pergunta[posicao];
+function mostraPergunta(){
+    perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
-    mostraAlternativa();
+    mostraAlternativas();
 }
-
-function mostraAlternativa() {
-    for (const alternativa of perguntaAtual.alternativa) {
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativa){
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa;
     }
