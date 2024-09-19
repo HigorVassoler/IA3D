@@ -7,5 +7,5 @@
 }
 
 .caixa-principal {
-    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
