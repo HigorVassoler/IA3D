@@ -6,4 +6,6 @@
     --cor-texto: white ;
 }
 
-.
+.caixa-principal {
+    background-color: var(--cor-fundo);
+}
