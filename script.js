@@ -5,7 +5,20 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [
     {
-        enunciado: "Você gosta da ideia de Inteligência Artificial?",
+        enunciado: "Você acha que as IA's estão emburrecendo as pessoas?",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmativa: "acredito que elas estão facilitando demais as coisas básicas."
+            },
+            {
+                texto: "Não",
+                afirmativa: "pois ela veio para auxiliar as pessoas."
+            }
+        ]
+    },
+    {
+        enunciado: "Você acha que as IA's são algo que as pessoas devem temer futuramente?",
         alternativas: [
             {
                 texto: "Sim",
@@ -18,20 +31,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Pergunta 2",
-        alternativas: [
-            {
-                texto: "Sim",
-                afirmativa: "Afirmativa da alternativa 1"
-            },
-            {
-                texto: "Não",
-                afirmativa: "Afirmativa da alternativa 2"
-            }
-        ]
-    },
-    {
-        enunciado: "Pergunta 3",
+        enunciado: "Você acredita que a tecnologia irá atrapalhar na juventude das pessoas?",
         alternativas: [
             {
                 texto: "Sim",
@@ -50,6 +50,10 @@ let perguntaAtual;
 let respostas = "";
 
 function mostraPergunta() {
+    if (posicao>=pergunta.length){
+        mostraReseultado();
+        return;
+    }
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
