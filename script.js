@@ -6,31 +6,31 @@ const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [     //serve para abrir lista de perguntas
     {   //abre o objeto das perguntas
-        enunciado: "Você acha que IA vai dominar o mundo?",
+        enunciado: "Você acha que as IA's estão emburrecendo as pessoas?",
         alternativas: [
-            {texto: "Sim",
-            afirmação:"A IA vai dominar o mundo"}, 
+            {texto: "Sim, ",
+            afirmação:"acredito que elas estão facilitando demais as coisas básicas."}, 
 
-            {texto: "Não",
-            afirmação:"A IA não dominará o mundo"}]
+            {texto: "Não, ",
+            afirmação:"pois ela veio para auxiliar as pessoas."}]
     },
     { 
-        enunciado: "A IA vai substituir os professores?",
+        enunciado: "Você acha que as IA's são algo que as pessoas devem temer futuramente?",
         alternativas: [
-            {texto: "Sim",
-            afirmação:"A IA logo tomará o lugar dos professores"}, 
+            {texto: "Sim, ",
+            afirmação:"devem temer."}, 
                 
-            {texto: "Não",
-            afirmação:"A IA jamais tomará o lugar dos professores"}]
+            {texto: "Não, ",
+            afirmação:"não devem temer."}]
     },
     { 
-        enunciado: "A IA está pronta para todos?",
+        enunciado: "Você acredita que a tecnologia irá atrapalhar na juventude das pessoas?",
         alternativas: [
-            {texto: "Sim",
-            afirmação:"Sim, a IA será útil e está pronta para todos"}, 
+            {texto: "Sim, ",
+            afirmação:"vai atrapalhar."}, 
                 
-            {texto: "Não",
-            afirmação:"Não, a IA não é para o uso de todos"}]
+            {texto: "Não, ",
+            afirmação:"não vai atrapalhar."}]
     },
 ]
 
@@ -58,7 +58,7 @@ function mostraAlternativas() {
 }
 function respostaSelecionada(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmativa;
-    respostas += afirmacoes;
+    respostas += afirmacoes + "";
     posicao++;
     mostraPergunta();
 }
